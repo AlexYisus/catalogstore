@@ -1,0 +1,32 @@
+/* Estilos para el HTML básico */
+html {
+  font-size: 16px; /* Tamaño base para rem units */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 0; /* Eliminamos el margen inferior para que la barra quede pegada */
+}
+
+.experience-bar {
+  background-color: #1a365d; /* Azul oscuro */
+  color: white;
+  padding: 0.75rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 2rem;
+}

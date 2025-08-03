@@ -1,0 +1,139 @@
+/* --- PRIMERA SECCIÓN (categories) - 3 columnas --- */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.category-card h3 {
+  padding: 10px 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.category-card p {
+  padding: 0 15px 15px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive: 3 columnas en desktop, 2 en tablet, 1 en móvil */
+@media (max-width: 900px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .categories {
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+  }
+}
+
+/* --- SEGUNDA SECCIÓN (numbers-section) - Estilo anterior --- */
+.numbers-section {
+  background-color: #4CAF50; /* Color verde */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.numbers-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.numbers-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.numbers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.number-item {
+  text-align: center;
+  padding: 20px;
+  flex: 1;
+  min-width: 150px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.number-value {
+  color: #001F3F; /* Azul marino */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.number-label {
+  color: #001F3F; /* Mismo azul marino */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Responsive para numbers-section */
+@media (max-width: 768px) {
+  .numbers-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .number-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  
+  .number-value {
+    font-size: 2rem;
+  }
+  
+  .number-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .numbers-title {
+    font-size: 1.5rem;
+  }
+  
+  .number-value {
+    font-size: 1.8rem;
+  }
+  
+  .number-item {
+    width: 90%;
+    padding: 15px;
+    min-width: unset;
+    margin-bottom: 15px;
+  }
+}
