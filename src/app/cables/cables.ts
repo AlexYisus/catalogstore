@@ -25,13 +25,16 @@ export class CablesElectricosComponent {
   }
 
   viewPDF(): void {
-    try {
-      const pdfUrl = 'assets/catalogos/cables_electricos_catalogo_ccaj.pdf';
+    const pdfUrl = 'assets/catalogos/cables_electricos_catalogo_ccaj.pdf';
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
       window.open(pdfUrl, '_blank', 'noopener,noreferrer');
-      console.log('Catálogo de accesorios abierto en nueva pestaña');
-    } catch (error) {
-      console.error('Error al abrir PDF:', error);
+    } else {
+      // Para escritorio, usa iframe/embed
+      window.open(`/pdf-viewer.html?file=${encodeURIComponent(pdfUrl)}`, '_blank');
     }
+  }
   }
 
   /*downloadPDF(): void {
@@ -49,4 +52,3 @@ export class CablesElectricosComponent {
       console.error('Error al descargar PDF:', error);
     }
   }*/
-}

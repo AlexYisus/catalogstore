@@ -25,22 +25,16 @@ export class TuberiasComponent {
     this.router.navigate(['/']);
   }
 
-viewPDF(): void {
-  try {
+  viewPDF(): void {
     const pdfUrl = 'assets/catalogos/catalogo_tuberias_ccaj.pdf';
-    const iframe = document.createElement('iframe');
-    iframe.src = pdfUrl;
-    iframe.width = '100%';
-    iframe.height = '600px';
-    iframe.style.border = 'none';
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
-    // Abre en una ventana emergente o incrusta en el DOM
-    const newWindow = window.open('', '_blank');
-    newWindow?.document.body.appendChild(iframe);
-    console.log('PDF abierto en ventana emergente');
-  } catch (error) {
-    console.error('Error al abrir PDF:', error);
+    if (isMobile) {
+      window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      // Para escritorio, usa iframe/embed
+      window.open(`/pdf-viewer.html?file=${encodeURIComponent(pdfUrl)}`, '_blank');
+    }
   }
-}
 
 }
