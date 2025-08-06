@@ -15,4 +15,9 @@ export class HomeComponent {
   navigateToCategory(category: string): void {
     this.router.navigate([`/${category}`]);
   }
+
+  navigateToCatalog(category: string) {
+    // Asumiendo que tienes un archivo PDF llamado 'tuberias.pdf' en assets/catalogos
+    window.open(`/assets/catalogos/${category}.pdf`, '_blank');
+  }
 }

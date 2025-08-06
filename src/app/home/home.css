@@ -119,6 +119,38 @@
   .number-label {
     font-size: 1rem;
   }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+ /* .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  }
+  
+  .btn-back {
+    background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+    margin-bottom: 2rem;
+  }
+  
+  .btn-back:hover {
+    background: linear-gradient(135deg, #475569 0%, #334155 100%);
+    box-shadow: 0 8px 25px rgba(100, 116, 139, 0.3);
+  }*/
+  
 }
 
 @media (max-width: 480px) {
