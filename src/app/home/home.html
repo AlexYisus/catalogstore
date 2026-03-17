@@ -11,7 +11,7 @@
       <p>Amplia gama de herramientas para tus proyectos. Desde tornillos y tuercas hasta herramientas especializadas.</p>
     </div>-->
   
-    <div class="category-card" (click)="navigateToCategory('tuberias')">
+    <div class="category-card">
       <img src="assets/images/Tuberias-logo-uno.jpeg" 
            alt="Tuberías" 
            class="category-image"
@@ -20,7 +20,9 @@
            height="300">
       <h3>🚿 Tuberías y Accesorios</h3>
       <p>Sistemas completos de tuberías para agua, gas y drenaje. Materiales de primera calidad en PVC, cobre y acero.</p>
-      
+      <button class="btn btn-view" (click)="navigateToCatalog('catalogo_tuberias_ccaj')">
+        Ver Catálogo
+      </button>
     </div>
   
     <div class="category-card" (click)="navigateToCategory('cables-electricos')">

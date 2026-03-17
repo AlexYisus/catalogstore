@@ -135,7 +135,7 @@
     text-align: center;
   }
   
- /* .btn:hover {
+  .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
     background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
@@ -149,7 +149,7 @@
   .btn-back:hover {
     background: linear-gradient(135deg, #475569 0%, #334155 100%);
     box-shadow: 0 8px 25px rgba(100, 116, 139, 0.3);
-  }*/
+  }
   
 }
 
