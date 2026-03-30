@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-tuberias',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './tuberias.html',
   styleUrl: './tuberias.css'
 })
