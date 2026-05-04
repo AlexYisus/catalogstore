@@ -94,34 +94,63 @@
     </div>
   </section>
 
-  
-
-    <section class="location-section">
+  <section class="contact-combined-section">
     <div class="container">
-      <h2 class="location-title">📍 Nuestra ubicación</h2>
-      <div class="map-container">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2923077073847!2d-78.61540892590405!3d-0.930387635338885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d461f1fac0fd83%3A0x689744ecca74d4aa!2sElectroferreter%C3%ADa%20CCAJ!5e0!3m2!1ses-419!2sec!4v1774641950729!5m2!1ses-419!2sec" 
-          width="100%" 
-          height="450" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-      <div class="location-info">
-        <h2 class="location-title">Horarios de atención e información </h2>
-        <p><strong>🕔 Lunes a Sábado: </strong> 08h00 a 19h00</p>
-        <p><strong>📱 Telefono: </strong> 0992953397 / 0987110002 </p>
-        <p><strong>📍 Dirección:</strong> Av. Napo 4-44 y Juan Abel Echeverría, Latacunga, Ecuador</p>
-        <a href="https://wa.me/593992953397" 
-           class="btn-whatsapp" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          <span class="whatsapp-icon">💬</span>
-          Contáctanos por WhatsApp
-        </a>
-      </div>
+        <div class="contact-grid">
+            
+            <!-- Columna Izquierda: Mapa e Info -->
+            <div class="info-side">
+                <h2 class="section-title">📍 Nuestra Ubicación</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2923077073847!2d-78.61540892590405!3d-0.930387635338885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d461f1fac0fd83%3A0x689744ecca74d4aa!2sElectroferreter%C3%ADa%20CCAJ!5e0!3m2!1ses-419!2sec!4v1774641950729!5m2!1ses-419!2sec" 
+                        width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                
+                <div class="details-card">
+                    <h3>Horarios e Información</h3>
+                    <p><strong>🕔 Horario:</strong> Lunes a Sábado: 08h00 a 19h00</p>
+                    <p><strong>📱 Teléfonos:</strong> 0992953397 / 0987110002</p>
+                    <p><strong>📍 Dirección:</strong> Av. Napo 4-44 y Juan Abel Echeverría, Latacunga</p>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario -->
+            <div class="form-side">
+                <div class="contact-wrapper">
+                    <h2 class="contact-title">📱 Cotiza con nosotros</h2>
+                    <p class="contact-subtitle">Te contactaremos por WhatsApp de inmediato</p>
+                    
+                    <form #whatsappForm="ngForm" (ngSubmit)="sendToWhatsApp($event)" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre y Apellido</label>
+                            <input type="text" id="name" name="name" [(ngModel)]="formData.name" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" [(ngModel)]="formData.email" required placeholder="ejemplo@correo.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product">Producto de interés</label>
+                            <input type="text" id="product" name="product" [(ngModel)]="formData.product" required placeholder="Ej: Cable eléctrico, herramientas...">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" [(ngModel)]="formData.message" rows="4" required placeholder="Cuéntanos qué necesitas..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-whatsapp">
+                            <span class="icon">💬</span> Enviar por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </section>
+</section>
+    <script src="home.ts"></script>
