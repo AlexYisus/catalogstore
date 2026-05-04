@@ -54,7 +54,7 @@
 
 /* --- SEGUNDA SECCIÓN (numbers-section) - Estilo anterior --- */
 .numbers-section {
-  background-color: #4CAF50; /* Color verde */
+  background-color: #035096; /* Color azul */
   padding: 40px 20px;
   font-family: Arial, sans-serif;
 }
@@ -88,14 +88,14 @@
 }
 
 .number-value {
-  color: #001F3F; /* Azul marino */
+  color: #ffffff; /* Azul marino */
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .number-label {
-  color: #001F3F; /* Mismo azul marino */
+  color: #ffffff; /* Mismo azul marino */
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -198,6 +198,7 @@
 
 .map-container {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #f4f7f6;
     margin-bottom: 20px;
 }
 
@@ -210,7 +211,7 @@
 
 .details-card h3 {
     margin-top: 0;
-    color: #25d366;
+    color: #1a365d;
     margin-bottom: 15px;
 }
 
